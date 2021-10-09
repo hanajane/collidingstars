@@ -4240,6 +4240,37 @@ fieldset:disabled .btn {
     display: block;
 }
 
+
+/* Animation */
+
+.masthead h2 {
+    animation: animated-text 4s linear 1s 1 normal both, animated-cursor 600ms linear infinite;
+}
+
+
+/* text animation */
+
+@keyframes animated-text {
+    from {
+        width: 0;
+    }
+    to {
+        width: 456px;
+    }
+}
+
+
+/* cursor animations */
+
+@keyframes animated-cursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
 .dropdown-header {
     display: block;
     padding: 0.5rem 1rem;
@@ -11623,4 +11654,23 @@ body {
 
 .footer {
     padding: 5rem 0;
+}
+
+a.back-to-top {
+    display: none;
+    width: 60px;
+    height: 60px;
+    text-indent: -9999px;
+    position: fixed;
+    z-index: 999;
+    right: 20px;
+    bottom: 20px;
+    background: #64a19d url("../assets/img/up-arrow.png") no-repeat center 43%;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+
+a:hover.back-to-top {
+    background-color: #000;
 }

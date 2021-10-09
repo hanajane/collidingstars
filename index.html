@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 
 <body id="page-top">
@@ -42,7 +43,7 @@
             <div class="d-flex justify-content-center">
                 <div class="text-center">
                     <h1 class="mx-auto my-0 text-uppercase mt-5">Colliding Stars</h1>
-                    <h2 class="text-white-50 mx-auto mt-5 mb-5">[ Tagline Here ] </h2>
+                    <h2 class="text-white-50 mx-auto mt-5 mb-5">[ Tagline Here ] Go ahead, say something good.</h2>
                     <a class="btn btn-primary" href="#about">About Us</a>
                 </div>
             </div>
@@ -243,12 +244,35 @@
                 <a class="mx-2" href="https://discord.com/invite/SbXsx3bFTb"><i class="fab fa-discord"></i></a>
                 <!-- <a class="mx-2" href="#!"><i class="fab fa-github"></i></a> -->
             </div>
+            <a href="#" class="back-to-top">Back to Top</a>
         </div>
     </section>
     <!-- Footer-->
     <footer class="footer bg-black small text-center text-white-50">
         <div class="container px-4 px-lg-5">Copyright &copy; Colliding Stars 2021</div>
     </footer>
+
+    <script type="text/javascript">
+        // create the back to top button
+        $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+
+        var amountScrolled = 300;
+
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > amountScrolled) {
+                $('a.back-to-top').fadeIn('slow');
+            } else {
+                $('a.back-to-top').fadeOut('slow');
+            }
+        });
+
+        $('a.back-to-top, a.simple-back-to-top').click(function() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 700);
+            return false;
+        });
+    </script>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
